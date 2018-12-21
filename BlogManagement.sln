@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.106
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogManagement", "BlogManagement\BlogManagement.csproj", "{4340A512-7F3A-421E-9324-855955E0EB5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BMService", "BMService\BMService.csproj", "{8C6AECA7-96FF-4615-8EDA-2AA03226E17A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogDOA", "BlogDOA\BlogDOA.csproj", "{DD5B82C6-6378-4B7F-BCF9-22BAB28EEB7C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4340A512-7F3A-421E-9324-855955E0EB5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4340A512-7F3A-421E-9324-855955E0EB5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4340A512-7F3A-421E-9324-855955E0EB5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4340A512-7F3A-421E-9324-855955E0EB5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C6AECA7-96FF-4615-8EDA-2AA03226E17A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C6AECA7-96FF-4615-8EDA-2AA03226E17A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C6AECA7-96FF-4615-8EDA-2AA03226E17A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C6AECA7-96FF-4615-8EDA-2AA03226E17A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD5B82C6-6378-4B7F-BCF9-22BAB28EEB7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD5B82C6-6378-4B7F-BCF9-22BAB28EEB7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD5B82C6-6378-4B7F-BCF9-22BAB28EEB7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD5B82C6-6378-4B7F-BCF9-22BAB28EEB7C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D26167E7-37C2-42AC-873C-98867C746ACD}
+	EndGlobalSection
+EndGlobal

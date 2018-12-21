@@ -1,0 +1,16 @@
+C:\Users\Arun\source\repos\BlogManagement\BMService\bin\Debug\netcoreapp2.1\BMService.deps.json
+C:\Users\Arun\source\repos\BlogManagement\BMService\bin\Debug\netcoreapp2.1\BMService.dll
+C:\Users\Arun\source\repos\BlogManagement\BMService\bin\Debug\netcoreapp2.1\BMService.pdb
+C:\Users\Arun\source\repos\BlogManagement\BMService\obj\Debug\netcoreapp2.1\BMService.csprojAssemblyReference.cache
+C:\Users\Arun\source\repos\BlogManagement\BMService\obj\Debug\netcoreapp2.1\BMService.csproj.CoreCompileInputs.cache
+C:\Users\Arun\source\repos\BlogManagement\BMService\obj\Debug\netcoreapp2.1\BMService.AssemblyInfoInputs.cache
+C:\Users\Arun\source\repos\BlogManagement\BMService\obj\Debug\netcoreapp2.1\BMService.AssemblyInfo.cs
+C:\Users\Arun\source\repos\BlogManagement\BMService\obj\Debug\netcoreapp2.1\BMService.dll
+C:\Users\Arun\source\repos\BlogManagement\BMService\obj\Debug\netcoreapp2.1\BMService.pdb
+C:\Users\Arun\source\repos\BlogManagement\BMService\bin\Debug\netcoreapp2.1\BlogDOA.dll
+C:\Users\Arun\source\repos\BlogManagement\BMService\bin\Debug\netcoreapp2.1\BlogDOA.pdb
+C:\Users\Arun\source\repos\BlogManagement\BMService\obj\Debug\netcoreapp2.1\BMService.csproj.CopyComplete
+C:\Users\Arun\source\repos\BlogManagement\BMService\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Arun\source\repos\BlogManagement\BMService\bin\Debug\netcoreapp2.1\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\Arun\source\repos\BlogManagement\BMService\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\Arun\source\repos\BlogManagement\BMService\bin\Debug\netcoreapp2.1\Microsoft.Extensions.Hosting.Abstractions.xml

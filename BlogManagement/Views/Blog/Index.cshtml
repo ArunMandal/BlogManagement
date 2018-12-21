@@ -1,0 +1,133 @@
+﻿@model IEnumerable<BMService.ViewModel.BlogVM> 
+
+
+@*@using BMService.ViewModel
+    @model BlogVM*@
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2 style="text-align:center; color:white">Blogs</h2>
+
+<p>
+    @*<button asp-action="Create" class="btn btn-primary btn-lg">Create New </button>*@
+    <a id="abcd" onclick="myFunction()" style="width:150px; height:50px" class="btn btn-primary btn-lg">Create New</a>
+</p>
+
+<body style="background-color:#101010">
+
+    <script>
+        debugger;
+        function myFunction() {
+            var x = document.getElementById("divCreateBlog");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            }
+           
+            document.getElementById("BlogId").value = "";
+            document.getElementById("url").value = "";
+            document.getElementById("btnCreat").value = "Create";
+        }
+        function showDivEditblog() {
+            
+            document.getElementById("abcd").style.display = "none";
+            var x = document.getElementById("divCreateBlog");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            }
+           
+            document.getElementById("btnCreat").value = "Update";
+
+            document.getElementById("search-theme-form").attr = "Edit";
+        
+
+            var table = document.getElementById('table');
+           
+            for (var i = 1; i < table.rows.length; i++) {              
+                table.rows[i].onclick = function () {
+                    //rIndex = this.rowIndex;
+                    console.log(this.cells[1].innerHTML);
+                    document.getElementById("BlogId").value = this.cells[0].innerHTML;
+                    document.getElementById("url").value = this.cells[1].innerHTML;
+
+                };
+            }
+        }
+        function myFun() {
+            
+            document.getElementById("divCreateBlog").style.display = "none";
+            document.getElementById("abcd").style.display = "block";
+        }
+    </script>
+
+    <div class="row" id="divCreateBlog" style="display:none">
+        <div class="col-md-4">
+            <form asp-action="Create" id="search-theme-form">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    @Html.DisplayNameFor(model => model.Url)
+                    @*<input type="email" id="tbxUrl" class="form-control" />*@
+                    @*<span asp-validation-for="Url" class="text-danger"></span>*@
+                    <input name="url" id="url" type="email" required class="form-control" />
+
+                </div>
+                <div style="display:none" class="form-group">
+                    @*@Html.DisplayNameFor(model => model.BlogId)*@
+                    @*<input type="email" id="tbxUrl" class="form-control" />*@
+                    @*<span asp-validation-for="Url" class="text-danger"></span>*@
+                    <input name="BlogId" id="BlogId" class="form-control" />
+
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" id="btnCreat"  value="Create" class=" btn-primary" />
+                    @*<input type="submit" onclick="createblog()" value="Create" class="btn btn-default" />*@
+                    <input type="button" id="btnCncl" onclick="myFun()" value="Cancel" class=" btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+    <table class="table table" id="table" style="border-color:black ;color:white; border-style:solid; ">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.BlogId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Url)
+                </th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(x => item.BlogId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(x => item.Url)
+                    </td>
+                    <td>
+                        @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+
+                        @*<a id="abcd" onclick="myFunction()" class="btn btn-primary btn-lg">Create New</a>*@
+                        <a onclick="showDivEditblog()" >Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.BlogId">Details</a> |
+                        <a asp-action="Delete" onclick="return confirm('Are you sure you want to delete this item?');"  asp-route-id="@item.BlogId">Delete</a>
+
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+

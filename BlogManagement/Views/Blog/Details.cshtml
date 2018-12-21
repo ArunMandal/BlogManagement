@@ -1,0 +1,155 @@
+﻿@model BMService.ViewModel.BlogDetailVM
+
+
+
+    @{
+        ViewData["Title"] = "Details";
+    }
+
+    @*@{ WebImage photo = null;
+        var newFileName = "";
+        var imagePath = "";
+
+        if (IsPost)
+        {
+            photo = WebImage.GetImageFromRequest();
+            if (photo != null)
+            {
+                newFileName = Guid.NewGuid().ToString() + "_" +
+                    Path.GetFileName(photo.FileName);
+                imagePath = @"images\" + newFileName;
+
+                photo.Save(@"~\" + imagePath);
+            }
+        }
+    }*@
+<body style="background-color:#101010">
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+    <script>tinymce.init({ selector: 'textarea' });</script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("divCreateBlog");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            }
+            else {
+                x.style.display = "none";
+            }
+        }
+
+
+    </script>
+    <h2 style="text-align:center;color:white">Posts </h2>
+
+    <div class="row">
+        <div class="col-md-7"><h4 style="color:white">Posts of @Html.DisplayFor(x => x.Url)</h4></div>
+        <div class="col-md-2"><h5 style="color:white;"> <a style="width: 65px;" id="abcd" onclick="myFunction()" class="btn btn-primary btn-lg">+</a></h5></div>
+
+
+    </div>
+    <div class="row">
+
+        <div class=" col-md-12">
+
+            <div style="color:white;display:none" class="card mb-4" asp-controller="Post" asp-action="Create" id="divCreateBlog">
+
+                <form asp-action="Create" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Title" class="control-label"></label>
+                        <input asp-for="Title" style="width:300px" required class="form-control" />
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Content" class="control-label"></label>
+                        @*<input style="width:300px" asp-for="Content" class="form-control" />*@
+                        <textarea style="width:600px" asp-for="Content" class="form-control"></textarea>
+                        <span asp-validation-for="Content" class="text-danger"></span>
+                    </div>
+
+                  
+
+                    <div class="form-group">
+                        @Html.TextBoxFor(m => m.BlogId, new { @Value = @Html.DisplayFor(x => x.BlogId), @type = "hidden" })
+                    </div>
+                    <div class="form-group">
+                        @* <input type="file" id="myFile">*@
+                        <label asp-for="Filename" class="control-label"></label>
+                        <input type="file" name="image" id="image" class="form-control" style="height:auto;width:300px" />
+                        <span asp-validation-for="Filename" class="text-danger"></span>
+
+                    </div>
+                    <div class="form-group">
+                        <input asp-controller="Post" style="height:30px ;width:90px" asp-action="Create" type="submit" value="Create" class=" btn-primary" />
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <div class="table-responsive">
+                @if (Model.Posts != null)
+                {
+                    @foreach (var item in Model.Posts)
+                    {
+
+                        <div style="color:white" class="card mb-4">
+                            <img style="width:745px;height:250px" class="card-img-top" src="~/Images/@Html.DisplayFor(modelItem => item.Filename)" alt="No image">
+                            <div class="card-body">
+                                <h2 class="card-title">@Html.DisplayFor(modelItem => item.Title)</h2>
+                                <p id="pcontent" class="card-text">@Html.DisplayFor(modelItem => item.Content)</p>
+                                <a href="#" class="btn btn-primary">Read More &rarr;</a>
+                            </div>
+                            <div class="card-footer text-muted">
+                                Posted on @Html.DisplayFor(modelItem => item.PostedDate), by
+                                <a href="#">@Html.DisplayFor(x => x.Url)</a>
+                            </div>
+                        </div>
+                        @*<hr />*@
+                        <br /> <br /> <br />
+                    }
+                }
+            </div>
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+    </div>
+    <div>
+        @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+        <a asp-action="Index">Back to List</a>
+    </div>
+    <script type="text/javascript">
+
+
+     
+
+    var blogId = '@Model.BlogId';
+        function myFunction() {
+            var x = document.getElementById("divCreateBlog");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            }
+            else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+
+
+
+
+
