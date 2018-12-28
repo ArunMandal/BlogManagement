@@ -17,5 +17,9 @@ namespace BMService.ViewModel
         public string Filename { get; set; }
         public string PostedBy { get; set; }
         public string PostedDate { get; set; }
+
+
+
+
     }
 }

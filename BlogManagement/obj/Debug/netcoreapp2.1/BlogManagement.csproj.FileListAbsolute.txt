@@ -32,10 +32,8 @@ C:\Users\Arun\source\repos\BlogManagement\BlogManagement\obj\Debug\netcoreapp2.1
 C:\Users\Arun\source\repos\BlogManagement\BlogManagement\obj\Debug\netcoreapp2.1\BlogManagement.csproj.CopyComplete
 C:\Users\Arun\source\repos\BlogManagement\BlogManagement\bin\Debug\netcoreapp2.1\BMService.dll
 C:\Users\Arun\source\repos\BlogManagement\BlogManagement\bin\Debug\netcoreapp2.1\BMService.pdb
-C:\Users\Arun\source\repos\BlogManagement\BlogManagement\obj\Debug\netcoreapp2.1\Razor\Views\Blog\Create.g.cshtml.cs
 C:\Users\Arun\source\repos\BlogManagement\BlogManagement\obj\Debug\netcoreapp2.1\Razor\Views\Blog\Details.g.cshtml.cs
 C:\Users\Arun\source\repos\BlogManagement\BlogManagement\obj\Debug\netcoreapp2.1\Razor\Views\Blog\Index.g.cshtml.cs
-C:\Users\Arun\source\repos\BlogManagement\BlogManagement\obj\Debug\netcoreapp2.1\Razor\Views\Blog\Edit.g.cshtml.cs
 C:\Users\Arun\source\repos\BlogManagement\BlogManagement\bin\Debug\netcoreapp2.1\BlogDOA.dll
 C:\Users\Arun\source\repos\BlogManagement\BlogManagement\bin\Debug\netcoreapp2.1\BlogDOA.pdb
-C:\Users\Arun\source\repos\BlogManagement\BlogManagement\obj\Debug\netcoreapp2.1\Razor\Views\Blog\Delete.g.cshtml.cs
+C:\Users\Arun\source\repos\BlogManagement\BlogManagement\obj\Debug\netcoreapp2.1\Razor\Views\Post\PostDetail.g.cshtml.cs

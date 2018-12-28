@@ -12,5 +12,6 @@
     <WebStackScaffolding_ViewDialogWidth>600</WebStackScaffolding_ViewDialogWidth>
     <View_SelectedScaffolderID>MvcViewScaffolder</View_SelectedScaffolderID>
     <View_SelectedScaffolderCategoryPath>root/View</View_SelectedScaffolderCategoryPath>
+    <WebStackScaffolding_DbContextTypeFullName>BlogDOA.Context.BloggingContext</WebStackScaffolding_DbContextTypeFullName>
   </PropertyGroup>
 </Project>

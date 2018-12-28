@@ -13,10 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Post\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\BMService\BMService.csproj" />
   </ItemGroup>
 

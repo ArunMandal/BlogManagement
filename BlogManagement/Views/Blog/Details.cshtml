@@ -2,32 +2,29 @@
 
 
 
-    @{
-        ViewData["Title"] = "Details";
-    }
+@{
+    ViewData["Title"] = "Details";
+}
 
-    @*@{ WebImage photo = null;
-        var newFileName = "";
-        var imagePath = "";
 
-        if (IsPost)
-        {
-            photo = WebImage.GetImageFromRequest();
-            if (photo != null)
-            {
-                newFileName = Guid.NewGuid().ToString() + "_" +
-                    Path.GetFileName(photo.FileName);
-                imagePath = @"images\" + newFileName;
-
-                photo.Save(@"~\" + imagePath);
-            }
-        }
-    }*@
 <body style="background-color:#101010">
     <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
     <script>tinymce.init({ selector: 'textarea' });</script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
     <script>
+      //$(document).ready(function () {
+      //    debugger;
+      //   // console.log("hello");
+      //    alert($('#rdmore').text())
+      //    alert($('.rdmore').text().length);
+      //    if ($('.rdmore').text().length > 100) {
+      //        var x = document.getElementById("rdmore");
+              
+      //        x.style.display = "block";
+      //    }
+
+      //      });
         function myFunction() {
             var x = document.getElementById("divCreateBlog");
             if (x.style.display === "none") {
@@ -36,8 +33,14 @@
             else {
                 x.style.display = "none";
             }
-        }
+            //var myDiv = $('#your-div-id');
+            //myDiv.text(myDiv.text().substring(0, 300))
+            // document.getElementById("tbxtitle").value = "";
+           
 
+          
+
+        }
 
     </script>
     <h2 style="text-align:center;color:white">Posts </h2>
@@ -58,7 +61,7 @@
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="form-group">
                         <label asp-for="Title" class="control-label"></label>
-                        <input asp-for="Title" style="width:300px" required class="form-control" />
+                        <input  asp-for="Title" style="width:300px" required class="form-control" />
                         <span asp-validation-for="Title" class="text-danger"></span>
                     </div>
                     <div class="form-group">
@@ -67,18 +70,13 @@
                         <textarea style="width:600px" asp-for="Content" class="form-control"></textarea>
                         <span asp-validation-for="Content" class="text-danger"></span>
                     </div>
-
-                  
-
                     <div class="form-group">
                         @Html.TextBoxFor(m => m.BlogId, new { @Value = @Html.DisplayFor(x => x.BlogId), @type = "hidden" })
                     </div>
                     <div class="form-group">
-                        @* <input type="file" id="myFile">*@
                         <label asp-for="Filename" class="control-label"></label>
                         <input type="file" name="image" id="image" class="form-control" style="height:auto;width:300px" />
                         <span asp-validation-for="Filename" class="text-danger"></span>
-
                     </div>
                     <div class="form-group">
                         <input asp-controller="Post" style="height:30px ;width:90px" asp-action="Create" type="submit" value="Create" class=" btn-primary" />
@@ -99,8 +97,10 @@
                             <img style="width:745px;height:250px" class="card-img-top" src="~/Images/@Html.DisplayFor(modelItem => item.Filename)" alt="No image">
                             <div class="card-body">
                                 <h2 class="card-title">@Html.DisplayFor(modelItem => item.Title)</h2>
-                                <p id="pcontent" class="card-text">@Html.DisplayFor(modelItem => item.Content)</p>
-                                <a href="#" class="btn btn-primary">Read More &rarr;</a>
+                               @* <div id="divContent" style="color:white" class="card-text ">@Html.Raw(item.Content)</div>*@
+                                <div  style="color:white" class="card-text rdmore ">@Html.DisplayFor(modelItem => item.Content)</div>
+                                @* <textarea id="pcontent" style="color:white" onclick="paraLoad();" class="card-text">@Html.Raw(item.Content)</textarea>*@
+                                <a asp-controller="Post" id="rdmore"  asp-action="PostDetail" asp-route-id="@item.PostId" class="btn btn-primary">Read More &rarr;</a>
                             </div>
                             <div class="card-footer text-muted">
                                 Posted on @Html.DisplayFor(modelItem => item.PostedDate), by
@@ -131,9 +131,6 @@
         <a asp-action="Index">Back to List</a>
     </div>
     <script type="text/javascript">
-
-
-     
 
     var blogId = '@Model.BlogId';
         function myFunction() {

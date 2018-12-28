@@ -79,7 +79,7 @@ using BlogManagement.Models;
             WriteLiteral("    <a id=\"abcd\" onclick=\"myFunction()\" style=\"width:150px; height:50px\" class=\"btn btn-primary btn-lg\">Create New</a>\r\n</p>\r\n\r\n");
             EndContext();
             BeginContext(428, 4739, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "88571ef0a8e44468a7b9c5c3f0e7037f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "51e20d4127914310ba44a2628f0e7837", async() => {
                 BeginContext(467, 1754, true);
                 WriteLiteral(@"
 
@@ -133,12 +133,12 @@ using BlogManagement.Models;
             ");
                 EndContext();
                 BeginContext(2221, 1333, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b743680039804bf5bf98186cca3b4f1b", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "86728c525e664736be8bfe929c897446", async() => {
                     BeginContext(2270, 18, true);
                     WriteLiteral("\r\n                ");
                     EndContext();
                     BeginContext(2288, 66, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ef361ccc1b04f9e9203544b63b73032", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9374384c1f734aa3bf8600e7bda80640", async() => {
                     }
                     );
                     __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.ValidationSummaryTagHelper>();
@@ -256,7 +256,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper.ValidationSumma
                 WriteLiteral("                        <a onclick=\"showDivEditblog()\" >Edit</a> |\r\n                        ");
                 EndContext();
                 BeginContext(4832, 63, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e2f23e11afb2475494ff6b95b0f49fc2", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c74f1fed9e414736814ee4fb9b759086", async() => {
                     BeginContext(4884, 7, true);
                     WriteLiteral("Details");
                     EndContext();
@@ -291,7 +291,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper.ValidationSumma
                 WriteLiteral(" |\r\n                        ");
                 EndContext();
                 BeginContext(4923, 134, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1953d5393d434324862903f2753b9d42", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d365dccbc1f14787b5ca1a906ef70f1a", async() => {
                     BeginContext(5047, 6, true);
                     WriteLiteral("Delete");
                     EndContext();

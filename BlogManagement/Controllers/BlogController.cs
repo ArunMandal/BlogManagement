@@ -63,7 +63,7 @@ namespace BlogManagement.Controllers
         
          //Get Posts
         public IActionResult Details(int? id)
-        {
+           {
             if (id == null)
             {
                 return NotFound();

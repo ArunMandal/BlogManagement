@@ -7,6 +7,7 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using BlogDOA.Entity;
 using Microsoft.EntityFrameworkCore.Internal;
+using System.Text.RegularExpressions;
 
 namespace BMService.Service
 {
@@ -45,13 +46,17 @@ namespace BMService.Service
         //Get Posts
         public BlogDetailVM getPostByBID(int? id)
         {
-
+            //string s = Regex.Replace(title, "<.*?>", String.Empty);
             var blogs = _db.Blogs.Include(x => x.Posts).FirstOrDefault(x => x.BlogId == id);
             List<PostVM> posts = new List<PostVM>();
             posts = blogs.Posts.OrderByDescending(x => x.PostId).Select(x => new PostVM()
             {
                 BlogId = x.BlogId,
-                Content = x.Content,
+                //  Content = x.Content.Substring(0,100)+"...",
+
+               // Content= Regex.Replace(x.Content, "<.*?>", String.Empty).Trim().Substring(0, 10) + "...",
+                Content = Regex.Replace(x.Content, "<.*?>", String.Empty).Trim().Length >100? Regex.Replace(x.Content, "<.*?>", String.Empty).Trim().Substring(0, 100) + "...": Regex.Replace(x.Content, "<.*?>", String.Empty),
+                //Content = x.Content,
                 PostId = x.PostId,
                 Title = x.Title,
                 Filename = x.Filename,

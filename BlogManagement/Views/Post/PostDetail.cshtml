@@ -1,0 +1,33 @@
+﻿@*@model BlogDOA.Entity.Post*@
+@model BMService.ViewModel.PostVM
+
+
+@{
+    ViewData["Title"] = "PostDetail";
+}
+
+<h2 style="color:white">@Html.DisplayFor(model => model.Title)</h2>
+<body style="background-color:#101010">
+
+    <div>
+        @*@Html.Raw(item.Content)*@
+        <div style="color:white" class="card mb-4">
+            <img style="width:745px;height:250px" class="card-img-top" src="~/Images/@Html.DisplayFor(model => model.Filename)" alt="No image">
+            <div class="card-body">
+                <h2 class="card-title">@Html.DisplayFor(model => model.Title)</h2>
+                @* <div style="color:white" class="card-text ">@Html.Raw(@Html.DisplayFor(model => model.Content))</div>*@
+                @* <div style="color:white" class="card-text "> @Html.DisplayFor(model => model.Content)</div>*@
+                <div style="color:white" class="card-text ">@Html.Raw(Model.Content)</div>
+
+            </div>
+            <div class="card-footer text-muted">
+                Posted on @Html.DisplayFor(model => model.PostedDate)
+                <a href="#">@Html.DisplayFor(x => x.PostedBy)</a>
+            </div>
+        </div>
+    </div>
+    <div>
+        @*<a asp-action="Edit" asp-route-id="@Model.PostId">Edit</a>*@ |
+            <a asp-controller="Blog" asp-action="Details" asp-route-id="@Model.BlogId">Back to List</a>
+    </div>
+    </body>

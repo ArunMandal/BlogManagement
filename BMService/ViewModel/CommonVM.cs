@@ -16,5 +16,8 @@ namespace BMService.ViewModel
         public DateTime PostedDate { get; set; }
 
 
+
+
+
     }
 }

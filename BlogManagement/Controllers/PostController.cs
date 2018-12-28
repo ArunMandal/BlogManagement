@@ -41,12 +41,7 @@ namespace BlogManagement.Controllers
 
                 _pstService.CreatePost(postVM, image);
               
-               
-                 //string pic = System.Guid.NewGuid() + "_" + System.IO.Path.GetFileName(image.FileName);
-                 //       string folderpath = _hostingEnvironment.ContentRootPath;
-                 //       string filepath = folderpath + "\\wwwroot\\images\\" + pic;
-                 //       FileInfo file = new FileInfo(filepath);
-                 //       image.CopyToAsync(new FileStream(filepath, FileMode.Create));
+
              
                
                 return RedirectToAction("Details", "Blog", new {id= postVM.BlogId });
@@ -54,6 +49,28 @@ namespace BlogManagement.Controllers
 
             return View(postVM);
 
+        }
+
+
+        // PostDetail
+
+        public IActionResult PostDetail(int? id)
+        {
+
+           
+               
+
+             var posts=   _pstService.getPostDetail(id);
+
+
+
+
+                //return RedirectToAction("Details", "Blog", new { id = postVM.BlogId });
+                //return RedirectToAction("PostDetail");
+            
+
+            return View(posts);
+            
         }
     }
 }
